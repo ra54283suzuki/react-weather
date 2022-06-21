@@ -1,13 +1,13 @@
 const Results = (props) => {
   return (
     <div>
-      {props.results.cityName && <div>{props.results.cityName}</div>}
-      {props.results.country && <div>{props.results.country}</div>}
-      {props.results.temperature && <div>{props.results.temperature} <span>℃</span></div>}
-      {props.results.conditionTEXT && 
-        <div>
+      {props.results.cityName && <div className="results-city">{props.results.cityName}</div>}
+      {props.results.country && <div className="results-country">{props.results.country}</div>}
+      {props.results.temperature && <div className="results-temp">{props.results.temperature} <span>℃</span></div>}
+      {props.results.conditionText && 
+        <div className="results-condition">
           <img src={props.results.icon} alt="icon"/>
-          <span>{props.results.conditionTEXT}</span>
+          <span>{props.results.conditionText}</span>
         </div>
       }
     </div>
